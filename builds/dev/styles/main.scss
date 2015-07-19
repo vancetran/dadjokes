@@ -4,9 +4,49 @@
 @import "pure/forms";
 @import "pure/buttons";
 @import "pure/menus";
-// @import "fonts";
+@import "fonts";
 
 body {
   font-size: 11pt;
-  border: 10px solid red;
+}
+
+header {
+  .home-menu {
+    @extend .pure-menu;
+    @extend .pure-menu-horizontal;
+    // @extend .pure-menu-fixed;
+    background: #dadada;
+
+    .brand {
+      @extend .pure-menu-heading;
+      color: #666;
+      font-weight: 400;
+      font-size: 120%;
+      text-transform: none;
+    }
+
+    .nav {
+      @extend .pure-menu-list;
+
+      li {
+        @extend .pure-menu-item;
+
+        a {
+          @extend .pure-menu-link;
+        }
+      }
+    }
+  }
+}
+
+#main {
+  border: 1px solid gray;
+  width: 90%;
+  height: 750px;
+  margin: 0 auto;
+
+  .login {
+    @extend .pure-form;
+    @extend .pure-form-stacked;
+  }
 }

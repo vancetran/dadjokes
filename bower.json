@@ -1,0 +1,27 @@
+{
+  "name": "dadjokes",
+  "version": "0.0.1",
+  "description": "A database of dadjokes.",
+  "keywords": [
+    "dadjoke",
+    "angular",
+    "firebase"
+  ],
+  "authors": [
+    "Vance Tran"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "angular-animate": "~1.4.3",
+    "angularfire": "~1.1.2"
+  }
+}

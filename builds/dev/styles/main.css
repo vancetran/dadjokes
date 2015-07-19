@@ -1590,22 +1590,37 @@ also have border and padding. This is done because some browsers don't render
 the padding. We explicitly set the box-model for select elements to border-box,
 so we can ignore the csslint warning.
 */
-.pure-form input[type="text"],
+.pure-form input[type="text"], #main .login input[type="text"],
 .pure-form input[type="password"],
+#main .login input[type="password"],
 .pure-form input[type="email"],
+#main .login input[type="email"],
 .pure-form input[type="url"],
+#main .login input[type="url"],
 .pure-form input[type="date"],
+#main .login input[type="date"],
 .pure-form input[type="month"],
+#main .login input[type="month"],
 .pure-form input[type="time"],
+#main .login input[type="time"],
 .pure-form input[type="datetime"],
+#main .login input[type="datetime"],
 .pure-form input[type="datetime-local"],
+#main .login input[type="datetime-local"],
 .pure-form input[type="week"],
+#main .login input[type="week"],
 .pure-form input[type="number"],
+#main .login input[type="number"],
 .pure-form input[type="search"],
+#main .login input[type="search"],
 .pure-form input[type="tel"],
+#main .login input[type="tel"],
 .pure-form input[type="color"],
+#main .login input[type="color"],
 .pure-form select,
-.pure-form textarea {
+#main .login select,
+.pure-form textarea,
+#main .login textarea {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -1619,7 +1634,7 @@ so we can ignore the csslint warning.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form input:not([type]) {
+.pure-form input:not([type]), #main .login input:not([type]) {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -1630,26 +1645,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 /* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
 /* May be able to remove this tweak as color inputs become more standardized across browsers. */
-.pure-form input[type="color"] {
+.pure-form input[type="color"], #main .login input[type="color"] {
   padding: 0.2em 0.5em;
 }
 
-.pure-form input[type="text"]:focus,
+.pure-form input[type="text"]:focus, #main .login input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
+#main .login input[type="password"]:focus,
 .pure-form input[type="email"]:focus,
+#main .login input[type="email"]:focus,
 .pure-form input[type="url"]:focus,
+#main .login input[type="url"]:focus,
 .pure-form input[type="date"]:focus,
+#main .login input[type="date"]:focus,
 .pure-form input[type="month"]:focus,
+#main .login input[type="month"]:focus,
 .pure-form input[type="time"]:focus,
+#main .login input[type="time"]:focus,
 .pure-form input[type="datetime"]:focus,
+#main .login input[type="datetime"]:focus,
 .pure-form input[type="datetime-local"]:focus,
+#main .login input[type="datetime-local"]:focus,
 .pure-form input[type="week"]:focus,
+#main .login input[type="week"]:focus,
 .pure-form input[type="number"]:focus,
+#main .login input[type="number"]:focus,
 .pure-form input[type="search"]:focus,
+#main .login input[type="search"]:focus,
 .pure-form input[type="tel"]:focus,
+#main .login input[type="tel"]:focus,
 .pure-form input[type="color"]:focus,
+#main .login input[type="color"]:focus,
 .pure-form select:focus,
-.pure-form textarea:focus {
+#main .login select:focus,
+.pure-form textarea:focus,
+#main .login textarea:focus {
   outline: 0;
   border-color: #129FEA;
 }
@@ -1658,40 +1688,58 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form input:not([type]):focus {
+.pure-form input:not([type]):focus, #main .login input:not([type]):focus {
   outline: 0;
   border-color: #129FEA;
 }
 
-.pure-form input[type="file"]:focus,
+.pure-form input[type="file"]:focus, #main .login input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
-.pure-form input[type="checkbox"]:focus {
+#main .login input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus,
+#main .login input[type="checkbox"]:focus {
   outline: thin solid #129FEA;
   outline: 1px auto #129FEA;
 }
 
-.pure-form .pure-checkbox,
-.pure-form .pure-radio {
+.pure-form .pure-checkbox, #main .login .pure-checkbox,
+.pure-form .pure-radio,
+#main .login .pure-radio {
   margin: 0.5em 0;
   display: block;
 }
 
-.pure-form input[type="text"][disabled],
+.pure-form input[type="text"][disabled], #main .login input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
+#main .login input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
+#main .login input[type="email"][disabled],
 .pure-form input[type="url"][disabled],
+#main .login input[type="url"][disabled],
 .pure-form input[type="date"][disabled],
+#main .login input[type="date"][disabled],
 .pure-form input[type="month"][disabled],
+#main .login input[type="month"][disabled],
 .pure-form input[type="time"][disabled],
+#main .login input[type="time"][disabled],
 .pure-form input[type="datetime"][disabled],
+#main .login input[type="datetime"][disabled],
 .pure-form input[type="datetime-local"][disabled],
+#main .login input[type="datetime-local"][disabled],
 .pure-form input[type="week"][disabled],
+#main .login input[type="week"][disabled],
 .pure-form input[type="number"][disabled],
+#main .login input[type="number"][disabled],
 .pure-form input[type="search"][disabled],
+#main .login input[type="search"][disabled],
 .pure-form input[type="tel"][disabled],
+#main .login input[type="tel"][disabled],
 .pure-form input[type="color"][disabled],
+#main .login input[type="color"][disabled],
 .pure-form select[disabled],
-.pure-form textarea[disabled] {
+#main .login select[disabled],
+.pure-form textarea[disabled],
+#main .login textarea[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
@@ -1701,15 +1749,17 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form input:not([type])[disabled] {
+.pure-form input:not([type])[disabled], #main .login input:not([type])[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
 
-.pure-form input[readonly],
+.pure-form input[readonly], #main .login input[readonly],
 .pure-form select[readonly],
-.pure-form textarea[readonly] {
+#main .login select[readonly],
+.pure-form textarea[readonly],
+#main .login textarea[readonly] {
   background-color: #eee;
   /* menu hover bg color */
   color: #777;
@@ -1717,41 +1767,45 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   border-color: #ccc;
 }
 
-.pure-form input:focus:invalid,
+.pure-form input:focus:invalid, #main .login input:focus:invalid,
 .pure-form textarea:focus:invalid,
-.pure-form select:focus:invalid {
+#main .login textarea:focus:invalid,
+.pure-form select:focus:invalid,
+#main .login select:focus:invalid {
   color: #b94a48;
   border-color: #e9322d;
 }
 
-.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="file"]:focus:invalid:focus, #main .login input[type="file"]:focus:invalid:focus,
 .pure-form input[type="radio"]:focus:invalid:focus,
-.pure-form input[type="checkbox"]:focus:invalid:focus {
+#main .login input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus,
+#main .login input[type="checkbox"]:focus:invalid:focus {
   outline-color: #e9322d;
 }
 
-.pure-form select {
+.pure-form select, #main .login select {
   /* Normalizes the height; padding is not sufficient. */
   height: 2.25em;
   border: 1px solid #ccc;
   background-color: white;
 }
 
-.pure-form select[multiple] {
+.pure-form select[multiple], #main .login select[multiple] {
   height: auto;
 }
 
-.pure-form label {
+.pure-form label, #main .login label {
   margin: 0.5em 0 0.2em;
 }
 
-.pure-form fieldset {
+.pure-form fieldset, #main .login fieldset {
   margin: 0;
   padding: 0.35em 0 0.75em;
   border: 0;
 }
 
-.pure-form legend {
+.pure-form legend, #main .login legend {
   display: block;
   width: 100%;
   padding: 0.3em 0;
@@ -1760,24 +1814,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   border-bottom: 1px solid #e5e5e5;
 }
 
-.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="text"], #main .login input[type="text"],
 .pure-form-stacked input[type="password"],
+#main .login input[type="password"],
 .pure-form-stacked input[type="email"],
+#main .login input[type="email"],
 .pure-form-stacked input[type="url"],
+#main .login input[type="url"],
 .pure-form-stacked input[type="date"],
+#main .login input[type="date"],
 .pure-form-stacked input[type="month"],
+#main .login input[type="month"],
 .pure-form-stacked input[type="time"],
+#main .login input[type="time"],
 .pure-form-stacked input[type="datetime"],
+#main .login input[type="datetime"],
 .pure-form-stacked input[type="datetime-local"],
+#main .login input[type="datetime-local"],
 .pure-form-stacked input[type="week"],
+#main .login input[type="week"],
 .pure-form-stacked input[type="number"],
+#main .login input[type="number"],
 .pure-form-stacked input[type="search"],
+#main .login input[type="search"],
 .pure-form-stacked input[type="tel"],
+#main .login input[type="tel"],
 .pure-form-stacked input[type="color"],
+#main .login input[type="color"],
 .pure-form-stacked input[type="file"],
+#main .login input[type="file"],
 .pure-form-stacked select,
+#main .login select,
 .pure-form-stacked label,
-.pure-form-stacked textarea {
+#main .login label,
+.pure-form-stacked textarea,
+#main .login textarea {
   display: block;
   margin: 0.25em 0;
 }
@@ -1786,7 +1857,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form-stacked input:not([type]) {
+.pure-form-stacked input:not([type]), #main .login input:not([type]) {
   display: block;
   margin: 0.25em 0;
 }
@@ -1824,19 +1895,21 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 /* Rounded Inputs */
-.pure-form input.pure-input-rounded,
-.pure-form .pure-input-rounded {
+.pure-form input.pure-input-rounded, #main .login input.pure-input-rounded,
+.pure-form .pure-input-rounded,
+#main .login .pure-input-rounded {
   border-radius: 2em;
   padding: 0.5em 1em;
 }
 
 /* Grouped Inputs */
-.pure-form .pure-group fieldset {
+.pure-form .pure-group fieldset, #main .login .pure-group fieldset {
   margin-bottom: 10px;
 }
 
-.pure-form .pure-group input,
-.pure-form .pure-group textarea {
+.pure-form .pure-group input, #main .login .pure-group input,
+.pure-form .pure-group textarea,
+#main .login .pure-group textarea {
   display: block;
   padding: 10px;
   margin: 0 0 -1px;
@@ -1845,59 +1918,63 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   top: -1px;
 }
 
-.pure-form .pure-group input:focus,
-.pure-form .pure-group textarea:focus {
+.pure-form .pure-group input:focus, #main .login .pure-group input:focus,
+.pure-form .pure-group textarea:focus,
+#main .login .pure-group textarea:focus {
   z-index: 3;
 }
 
-.pure-form .pure-group input:first-child,
-.pure-form .pure-group textarea:first-child {
+.pure-form .pure-group input:first-child, #main .login .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child,
+#main .login .pure-group textarea:first-child {
   top: 1px;
   border-radius: 4px 4px 0 0;
   margin: 0;
 }
 
-.pure-form .pure-group input:first-child:last-child,
-.pure-form .pure-group textarea:first-child:last-child {
+.pure-form .pure-group input:first-child:last-child, #main .login .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child,
+#main .login .pure-group textarea:first-child:last-child {
   top: 1px;
   border-radius: 4px;
   margin: 0;
 }
 
-.pure-form .pure-group input:last-child,
-.pure-form .pure-group textarea:last-child {
+.pure-form .pure-group input:last-child, #main .login .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child,
+#main .login .pure-group textarea:last-child {
   top: -2px;
   border-radius: 0 0 4px 4px;
   margin: 0;
 }
 
-.pure-form .pure-group button {
+.pure-form .pure-group button, #main .login .pure-group button {
   margin: 0.35em 0;
 }
 
-.pure-form .pure-input-1 {
+.pure-form .pure-input-1, #main .login .pure-input-1 {
   width: 100%;
 }
 
-.pure-form .pure-input-2-3 {
+.pure-form .pure-input-2-3, #main .login .pure-input-2-3 {
   width: 66%;
 }
 
-.pure-form .pure-input-1-2 {
+.pure-form .pure-input-1-2, #main .login .pure-input-1-2 {
   width: 50%;
 }
 
-.pure-form .pure-input-1-3 {
+.pure-form .pure-input-1-3, #main .login .pure-input-1-3 {
   width: 33%;
 }
 
-.pure-form .pure-input-1-4 {
+.pure-form .pure-input-1-4, #main .login .pure-input-1-4 {
   width: 25%;
 }
 
 /* Inline help for forms */
 /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-.pure-form .pure-help-inline,
+.pure-form .pure-help-inline, #main .login .pure-help-inline,
 .pure-form-message-inline {
   display: inline-block;
   padding-left: 0.3em;
@@ -1914,26 +1991,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 @media only screen and (max-width: 480px) {
-  .pure-form button[type="submit"] {
+  .pure-form button[type="submit"], #main .login button[type="submit"] {
     margin: 0.7em 0 0;
   }
 
-  .pure-form input:not([type]),
+  .pure-form input:not([type]), #main .login input:not([type]),
   .pure-form input[type="text"],
+  #main .login input[type="text"],
   .pure-form input[type="password"],
+  #main .login input[type="password"],
   .pure-form input[type="email"],
+  #main .login input[type="email"],
   .pure-form input[type="url"],
+  #main .login input[type="url"],
   .pure-form input[type="date"],
+  #main .login input[type="date"],
   .pure-form input[type="month"],
+  #main .login input[type="month"],
   .pure-form input[type="time"],
+  #main .login input[type="time"],
   .pure-form input[type="datetime"],
+  #main .login input[type="datetime"],
   .pure-form input[type="datetime-local"],
+  #main .login input[type="datetime-local"],
   .pure-form input[type="week"],
+  #main .login input[type="week"],
   .pure-form input[type="number"],
+  #main .login input[type="number"],
   .pure-form input[type="search"],
+  #main .login input[type="search"],
   .pure-form input[type="tel"],
+  #main .login input[type="tel"],
   .pure-form input[type="color"],
-  .pure-form label {
+  #main .login input[type="color"],
+  .pure-form label,
+  #main .login label {
     margin-bottom: 0.3em;
     display: block;
   }
@@ -1968,7 +2060,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   }
 
   /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-  .pure-form .pure-help-inline,
+  .pure-form .pure-help-inline, #main .login .pure-help-inline,
   .pure-form-message-inline,
   .pure-form-message {
     display: block;
@@ -2084,7 +2176,7 @@ Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
 /*csslint adjoining-classes: false, box-model:false*/
-.pure-menu {
+.pure-menu, header .home-menu {
   box-sizing: border-box;
 }
 
@@ -2095,44 +2187,49 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   z-index: 3;
 }
 
-.pure-menu-list,
-.pure-menu-item {
+.pure-menu-list, header .home-menu .nav,
+.pure-menu-item,
+header .home-menu .nav li {
   position: relative;
 }
 
-.pure-menu-list {
+.pure-menu-list, header .home-menu .nav {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.pure-menu-item {
+.pure-menu-item, header .home-menu .nav li {
   padding: 0;
   margin: 0;
   height: 100%;
 }
 
-.pure-menu-link,
-.pure-menu-heading {
+.pure-menu-link, header .home-menu .nav li a,
+.pure-menu-heading,
+header .home-menu .brand {
   display: block;
   text-decoration: none;
   white-space: nowrap;
 }
 
 /* HORIZONTAL MENU */
-.pure-menu-horizontal {
+.pure-menu-horizontal, header .home-menu {
   width: 100%;
   white-space: nowrap;
 }
 
-.pure-menu-horizontal .pure-menu-list {
+.pure-menu-horizontal .pure-menu-list, header .home-menu .pure-menu-list, header .home-menu .nav {
   display: inline-block;
 }
 
 /* Initial menus should be inline-block so that they are horizontal */
-.pure-menu-horizontal .pure-menu-item,
+.pure-menu-horizontal .pure-menu-item, header .home-menu .pure-menu-item, header .home-menu .nav li,
 .pure-menu-horizontal .pure-menu-heading,
-.pure-menu-horizontal .pure-menu-separator {
+header .home-menu .pure-menu-heading,
+header .home-menu .brand,
+.pure-menu-horizontal .pure-menu-separator,
+header .home-menu .pure-menu-separator {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -2140,7 +2237,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 
 /* Submenus should still be display: block; */
-.pure-menu-item .pure-menu-item {
+.pure-menu-item .pure-menu-item, header .home-menu .nav li .pure-menu-item, .pure-menu-item header .home-menu .nav li, header .home-menu .nav .pure-menu-item li, header .home-menu .nav li li {
   display: block;
 }
 
@@ -2154,7 +2251,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   z-index: 3;
 }
 
-.pure-menu-horizontal .pure-menu-children {
+.pure-menu-horizontal .pure-menu-children, header .home-menu .pure-menu-children {
   left: 0;
   top: auto;
   width: inherit;
@@ -2167,14 +2264,14 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 
 /* Vertical Menus - show the dropdown arrow */
-.pure-menu-has-children > .pure-menu-link:after {
+.pure-menu-has-children > .pure-menu-link:after, header .home-menu .nav li .pure-menu-has-children > a:after {
   padding-left: 0.5em;
   content: "\25B8";
   font-size: small;
 }
 
 /* Horizontal Menus - show the dropdown arrow */
-.pure-menu-horizontal .pure-menu-has-children > .pure-menu-link:after {
+.pure-menu-horizontal .pure-menu-has-children > .pure-menu-link:after, header .home-menu .pure-menu-has-children > .pure-menu-link:after, header .home-menu .nav li .pure-menu-horizontal .pure-menu-has-children > a:after, header .home-menu .nav li .pure-menu-has-children > a:after {
   content: "\25BE";
 }
 
@@ -2184,15 +2281,15 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   overflow-x: hidden;
 }
 
-.pure-menu-scrollable .pure-menu-list {
+.pure-menu-scrollable .pure-menu-list, .pure-menu-scrollable header .home-menu .nav, header .home-menu .pure-menu-scrollable .nav {
   display: block;
 }
 
-.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list, header .pure-menu-scrollable.home-menu .pure-menu-list, .pure-menu-horizontal.pure-menu-scrollable header .home-menu .nav, header .home-menu .pure-menu-horizontal.pure-menu-scrollable .nav, header .pure-menu-scrollable.home-menu .nav {
   display: inline-block;
 }
 
-.pure-menu-horizontal.pure-menu-scrollable {
+.pure-menu-horizontal.pure-menu-scrollable, header .pure-menu-scrollable.home-menu {
   white-space: nowrap;
   overflow-y: hidden;
   overflow-x: auto;
@@ -2202,7 +2299,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   padding: .5em 0;
 }
 
-.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar, header .pure-menu-scrollable.home-menu::-webkit-scrollbar {
   display: none;
 }
 
@@ -2213,18 +2310,18 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   margin: .3em 0;
 }
 
-.pure-menu-horizontal .pure-menu-separator {
+.pure-menu-horizontal .pure-menu-separator, header .home-menu .pure-menu-separator {
   width: 1px;
   height: 1.3em;
   margin: 0 0.3em;
 }
 
-.pure-menu-heading {
+.pure-menu-heading, header .home-menu .brand {
   text-transform: uppercase;
   color: #565d64;
 }
 
-.pure-menu-link {
+.pure-menu-link, header .home-menu .nav li a {
   color: #777;
 }
 
@@ -2232,9 +2329,10 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   background-color: #fff;
 }
 
-.pure-menu-link,
+.pure-menu-link, header .home-menu .nav li a,
 .pure-menu-disabled,
-.pure-menu-heading {
+.pure-menu-heading,
+header .home-menu .brand {
   padding: .5em 1em;
 }
 
@@ -2242,22 +2340,42 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   opacity: .5;
 }
 
-.pure-menu-disabled .pure-menu-link:hover {
+.pure-menu-disabled .pure-menu-link:hover, .pure-menu-disabled header .home-menu .nav li a:hover, header .home-menu .nav li .pure-menu-disabled a:hover {
   background-color: transparent;
 }
 
-.pure-menu-active > .pure-menu-link,
+.pure-menu-active > .pure-menu-link, header .home-menu .nav li .pure-menu-active > a,
 .pure-menu-link:hover,
-.pure-menu-link:focus {
+header .home-menu .nav li a:hover,
+.pure-menu-link:focus,
+header .home-menu .nav li a:focus {
   background-color: #eee;
 }
 
-.pure-menu-selected .pure-menu-link,
-.pure-menu-selected .pure-menu-link:visited {
+.pure-menu-selected .pure-menu-link, .pure-menu-selected header .home-menu .nav li a, header .home-menu .nav li .pure-menu-selected a,
+.pure-menu-selected .pure-menu-link:visited,
+.pure-menu-selected header .home-menu .nav li a:visited,
+header .home-menu .nav li .pure-menu-selected a:visited {
   color: #000;
 }
 
 body {
   font-size: 11pt;
-  border: 10px solid red;
+}
+
+header .home-menu {
+  background: #dadada;
+}
+header .home-menu .brand {
+  color: #666;
+  font-weight: 400;
+  font-size: 120%;
+  text-transform: none;
+}
+
+#main {
+  border: 1px solid gray;
+  width: 90%;
+  height: 750px;
+  margin: 0 auto;
 }
