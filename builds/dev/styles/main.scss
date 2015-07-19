@@ -40,13 +40,29 @@ header {
 }
 
 #main {
-  border: 1px solid gray;
-  width: 90%;
-  height: 750px;
+  @extend .pure-g;
+  display: block;
+  max-width: 980px;
   margin: 0 auto;
 
   .login {
-    @extend .pure-form;
-    @extend .pure-form-stacked;
+    @extend .pure-u-1;
+    @extend .pure-u-md-2-3;
+    @extend .l-box;
+
+    form {
+      @extend .pure-form;
+      @extend .pure-form-stacked;
+    }
+
   }
+}
+
+.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.l-box {
+  padding: .75em;
 }

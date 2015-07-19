@@ -435,7 +435,7 @@ Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g {
+.pure-g, #main {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -484,7 +484,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.pure-g {
+.pure-g,
+#main {
   word-spacing: -0.43em;
 }
 
@@ -503,11 +504,11 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class*="pure-u"] {
+.pure-g [class*="pure-u"], #main [class*="pure-u"] {
   font-family: sans-serif;
 }
 
-.pure-u-1,
+.pure-u-1, #main .login,
 .pure-u-1-1,
 .pure-u-1-2,
 .pure-u-1-3,
@@ -712,7 +713,7 @@ this the same font stack that Normalize.css sets for the `body`.
   *width: 95.8023%;
 }
 
-.pure-u-1,
+.pure-u-1, #main .login,
 .pure-u-1-1,
 .pure-u-5-5,
 .pure-u-24-24 {
@@ -944,6 +945,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-md-1-2,
   .pure-u-md-1-3,
   .pure-u-md-2-3,
+  #main .login,
   .pure-u-md-1-4,
   .pure-u-md-3-4,
   .pure-u-md-1-5,
@@ -1094,7 +1096,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     *width: 62.4690%;
   }
 
-  .pure-u-md-2-3,
+  .pure-u-md-2-3, #main .login,
   .pure-u-md-16-24 {
     width: 66.6667%;
     *width: 66.6357%;
@@ -1590,37 +1592,37 @@ also have border and padding. This is done because some browsers don't render
 the padding. We explicitly set the box-model for select elements to border-box,
 so we can ignore the csslint warning.
 */
-.pure-form input[type="text"], #main .login input[type="text"],
+.pure-form input[type="text"], #main .login form input[type="text"],
 .pure-form input[type="password"],
-#main .login input[type="password"],
+#main .login form input[type="password"],
 .pure-form input[type="email"],
-#main .login input[type="email"],
+#main .login form input[type="email"],
 .pure-form input[type="url"],
-#main .login input[type="url"],
+#main .login form input[type="url"],
 .pure-form input[type="date"],
-#main .login input[type="date"],
+#main .login form input[type="date"],
 .pure-form input[type="month"],
-#main .login input[type="month"],
+#main .login form input[type="month"],
 .pure-form input[type="time"],
-#main .login input[type="time"],
+#main .login form input[type="time"],
 .pure-form input[type="datetime"],
-#main .login input[type="datetime"],
+#main .login form input[type="datetime"],
 .pure-form input[type="datetime-local"],
-#main .login input[type="datetime-local"],
+#main .login form input[type="datetime-local"],
 .pure-form input[type="week"],
-#main .login input[type="week"],
+#main .login form input[type="week"],
 .pure-form input[type="number"],
-#main .login input[type="number"],
+#main .login form input[type="number"],
 .pure-form input[type="search"],
-#main .login input[type="search"],
+#main .login form input[type="search"],
 .pure-form input[type="tel"],
-#main .login input[type="tel"],
+#main .login form input[type="tel"],
 .pure-form input[type="color"],
-#main .login input[type="color"],
+#main .login form input[type="color"],
 .pure-form select,
-#main .login select,
+#main .login form select,
 .pure-form textarea,
-#main .login textarea {
+#main .login form textarea {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -1634,7 +1636,7 @@ so we can ignore the csslint warning.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form input:not([type]), #main .login input:not([type]) {
+.pure-form input:not([type]), #main .login form input:not([type]) {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -1645,41 +1647,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 /* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
 /* May be able to remove this tweak as color inputs become more standardized across browsers. */
-.pure-form input[type="color"], #main .login input[type="color"] {
+.pure-form input[type="color"], #main .login form input[type="color"] {
   padding: 0.2em 0.5em;
 }
 
-.pure-form input[type="text"]:focus, #main .login input[type="text"]:focus,
+.pure-form input[type="text"]:focus, #main .login form input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
-#main .login input[type="password"]:focus,
+#main .login form input[type="password"]:focus,
 .pure-form input[type="email"]:focus,
-#main .login input[type="email"]:focus,
+#main .login form input[type="email"]:focus,
 .pure-form input[type="url"]:focus,
-#main .login input[type="url"]:focus,
+#main .login form input[type="url"]:focus,
 .pure-form input[type="date"]:focus,
-#main .login input[type="date"]:focus,
+#main .login form input[type="date"]:focus,
 .pure-form input[type="month"]:focus,
-#main .login input[type="month"]:focus,
+#main .login form input[type="month"]:focus,
 .pure-form input[type="time"]:focus,
-#main .login input[type="time"]:focus,
+#main .login form input[type="time"]:focus,
 .pure-form input[type="datetime"]:focus,
-#main .login input[type="datetime"]:focus,
+#main .login form input[type="datetime"]:focus,
 .pure-form input[type="datetime-local"]:focus,
-#main .login input[type="datetime-local"]:focus,
+#main .login form input[type="datetime-local"]:focus,
 .pure-form input[type="week"]:focus,
-#main .login input[type="week"]:focus,
+#main .login form input[type="week"]:focus,
 .pure-form input[type="number"]:focus,
-#main .login input[type="number"]:focus,
+#main .login form input[type="number"]:focus,
 .pure-form input[type="search"]:focus,
-#main .login input[type="search"]:focus,
+#main .login form input[type="search"]:focus,
 .pure-form input[type="tel"]:focus,
-#main .login input[type="tel"]:focus,
+#main .login form input[type="tel"]:focus,
 .pure-form input[type="color"]:focus,
-#main .login input[type="color"]:focus,
+#main .login form input[type="color"]:focus,
 .pure-form select:focus,
-#main .login select:focus,
+#main .login form select:focus,
 .pure-form textarea:focus,
-#main .login textarea:focus {
+#main .login form textarea:focus {
   outline: 0;
   border-color: #129FEA;
 }
@@ -1688,58 +1690,58 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form input:not([type]):focus, #main .login input:not([type]):focus {
+.pure-form input:not([type]):focus, #main .login form input:not([type]):focus {
   outline: 0;
   border-color: #129FEA;
 }
 
-.pure-form input[type="file"]:focus, #main .login input[type="file"]:focus,
+.pure-form input[type="file"]:focus, #main .login form input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
-#main .login input[type="radio"]:focus,
+#main .login form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus,
-#main .login input[type="checkbox"]:focus {
+#main .login form input[type="checkbox"]:focus {
   outline: thin solid #129FEA;
   outline: 1px auto #129FEA;
 }
 
-.pure-form .pure-checkbox, #main .login .pure-checkbox,
+.pure-form .pure-checkbox, #main .login form .pure-checkbox,
 .pure-form .pure-radio,
-#main .login .pure-radio {
+#main .login form .pure-radio {
   margin: 0.5em 0;
   display: block;
 }
 
-.pure-form input[type="text"][disabled], #main .login input[type="text"][disabled],
+.pure-form input[type="text"][disabled], #main .login form input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
-#main .login input[type="password"][disabled],
+#main .login form input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
-#main .login input[type="email"][disabled],
+#main .login form input[type="email"][disabled],
 .pure-form input[type="url"][disabled],
-#main .login input[type="url"][disabled],
+#main .login form input[type="url"][disabled],
 .pure-form input[type="date"][disabled],
-#main .login input[type="date"][disabled],
+#main .login form input[type="date"][disabled],
 .pure-form input[type="month"][disabled],
-#main .login input[type="month"][disabled],
+#main .login form input[type="month"][disabled],
 .pure-form input[type="time"][disabled],
-#main .login input[type="time"][disabled],
+#main .login form input[type="time"][disabled],
 .pure-form input[type="datetime"][disabled],
-#main .login input[type="datetime"][disabled],
+#main .login form input[type="datetime"][disabled],
 .pure-form input[type="datetime-local"][disabled],
-#main .login input[type="datetime-local"][disabled],
+#main .login form input[type="datetime-local"][disabled],
 .pure-form input[type="week"][disabled],
-#main .login input[type="week"][disabled],
+#main .login form input[type="week"][disabled],
 .pure-form input[type="number"][disabled],
-#main .login input[type="number"][disabled],
+#main .login form input[type="number"][disabled],
 .pure-form input[type="search"][disabled],
-#main .login input[type="search"][disabled],
+#main .login form input[type="search"][disabled],
 .pure-form input[type="tel"][disabled],
-#main .login input[type="tel"][disabled],
+#main .login form input[type="tel"][disabled],
 .pure-form input[type="color"][disabled],
-#main .login input[type="color"][disabled],
+#main .login form input[type="color"][disabled],
 .pure-form select[disabled],
-#main .login select[disabled],
+#main .login form select[disabled],
 .pure-form textarea[disabled],
-#main .login textarea[disabled] {
+#main .login form textarea[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
@@ -1749,17 +1751,17 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form input:not([type])[disabled], #main .login input:not([type])[disabled] {
+.pure-form input:not([type])[disabled], #main .login form input:not([type])[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
 
-.pure-form input[readonly], #main .login input[readonly],
+.pure-form input[readonly], #main .login form input[readonly],
 .pure-form select[readonly],
-#main .login select[readonly],
+#main .login form select[readonly],
 .pure-form textarea[readonly],
-#main .login textarea[readonly] {
+#main .login form textarea[readonly] {
   background-color: #eee;
   /* menu hover bg color */
   color: #777;
@@ -1767,45 +1769,45 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   border-color: #ccc;
 }
 
-.pure-form input:focus:invalid, #main .login input:focus:invalid,
+.pure-form input:focus:invalid, #main .login form input:focus:invalid,
 .pure-form textarea:focus:invalid,
-#main .login textarea:focus:invalid,
+#main .login form textarea:focus:invalid,
 .pure-form select:focus:invalid,
-#main .login select:focus:invalid {
+#main .login form select:focus:invalid {
   color: #b94a48;
   border-color: #e9322d;
 }
 
-.pure-form input[type="file"]:focus:invalid:focus, #main .login input[type="file"]:focus:invalid:focus,
+.pure-form input[type="file"]:focus:invalid:focus, #main .login form input[type="file"]:focus:invalid:focus,
 .pure-form input[type="radio"]:focus:invalid:focus,
-#main .login input[type="radio"]:focus:invalid:focus,
+#main .login form input[type="radio"]:focus:invalid:focus,
 .pure-form input[type="checkbox"]:focus:invalid:focus,
-#main .login input[type="checkbox"]:focus:invalid:focus {
+#main .login form input[type="checkbox"]:focus:invalid:focus {
   outline-color: #e9322d;
 }
 
-.pure-form select, #main .login select {
+.pure-form select, #main .login form select {
   /* Normalizes the height; padding is not sufficient. */
   height: 2.25em;
   border: 1px solid #ccc;
   background-color: white;
 }
 
-.pure-form select[multiple], #main .login select[multiple] {
+.pure-form select[multiple], #main .login form select[multiple] {
   height: auto;
 }
 
-.pure-form label, #main .login label {
+.pure-form label, #main .login form label {
   margin: 0.5em 0 0.2em;
 }
 
-.pure-form fieldset, #main .login fieldset {
+.pure-form fieldset, #main .login form fieldset {
   margin: 0;
   padding: 0.35em 0 0.75em;
   border: 0;
 }
 
-.pure-form legend, #main .login legend {
+.pure-form legend, #main .login form legend {
   display: block;
   width: 100%;
   padding: 0.3em 0;
@@ -1814,41 +1816,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   border-bottom: 1px solid #e5e5e5;
 }
 
-.pure-form-stacked input[type="text"], #main .login input[type="text"],
+.pure-form-stacked input[type="text"], #main .login form input[type="text"],
 .pure-form-stacked input[type="password"],
-#main .login input[type="password"],
+#main .login form input[type="password"],
 .pure-form-stacked input[type="email"],
-#main .login input[type="email"],
+#main .login form input[type="email"],
 .pure-form-stacked input[type="url"],
-#main .login input[type="url"],
+#main .login form input[type="url"],
 .pure-form-stacked input[type="date"],
-#main .login input[type="date"],
+#main .login form input[type="date"],
 .pure-form-stacked input[type="month"],
-#main .login input[type="month"],
+#main .login form input[type="month"],
 .pure-form-stacked input[type="time"],
-#main .login input[type="time"],
+#main .login form input[type="time"],
 .pure-form-stacked input[type="datetime"],
-#main .login input[type="datetime"],
+#main .login form input[type="datetime"],
 .pure-form-stacked input[type="datetime-local"],
-#main .login input[type="datetime-local"],
+#main .login form input[type="datetime-local"],
 .pure-form-stacked input[type="week"],
-#main .login input[type="week"],
+#main .login form input[type="week"],
 .pure-form-stacked input[type="number"],
-#main .login input[type="number"],
+#main .login form input[type="number"],
 .pure-form-stacked input[type="search"],
-#main .login input[type="search"],
+#main .login form input[type="search"],
 .pure-form-stacked input[type="tel"],
-#main .login input[type="tel"],
+#main .login form input[type="tel"],
 .pure-form-stacked input[type="color"],
-#main .login input[type="color"],
+#main .login form input[type="color"],
 .pure-form-stacked input[type="file"],
-#main .login input[type="file"],
+#main .login form input[type="file"],
 .pure-form-stacked select,
-#main .login select,
+#main .login form select,
 .pure-form-stacked label,
-#main .login label,
+#main .login form label,
 .pure-form-stacked textarea,
-#main .login textarea {
+#main .login form textarea {
   display: block;
   margin: 0.25em 0;
 }
@@ -1857,7 +1859,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
 since IE8 won't execute CSS that contains a CSS3 selector.
 */
-.pure-form-stacked input:not([type]), #main .login input:not([type]) {
+.pure-form-stacked input:not([type]), #main .login form input:not([type]) {
   display: block;
   margin: 0.25em 0;
 }
@@ -1895,21 +1897,21 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 /* Rounded Inputs */
-.pure-form input.pure-input-rounded, #main .login input.pure-input-rounded,
+.pure-form input.pure-input-rounded, #main .login form input.pure-input-rounded,
 .pure-form .pure-input-rounded,
-#main .login .pure-input-rounded {
+#main .login form .pure-input-rounded {
   border-radius: 2em;
   padding: 0.5em 1em;
 }
 
 /* Grouped Inputs */
-.pure-form .pure-group fieldset, #main .login .pure-group fieldset {
+.pure-form .pure-group fieldset, #main .login form .pure-group fieldset {
   margin-bottom: 10px;
 }
 
-.pure-form .pure-group input, #main .login .pure-group input,
+.pure-form .pure-group input, #main .login form .pure-group input,
 .pure-form .pure-group textarea,
-#main .login .pure-group textarea {
+#main .login form .pure-group textarea {
   display: block;
   padding: 10px;
   margin: 0 0 -1px;
@@ -1918,63 +1920,63 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   top: -1px;
 }
 
-.pure-form .pure-group input:focus, #main .login .pure-group input:focus,
+.pure-form .pure-group input:focus, #main .login form .pure-group input:focus,
 .pure-form .pure-group textarea:focus,
-#main .login .pure-group textarea:focus {
+#main .login form .pure-group textarea:focus {
   z-index: 3;
 }
 
-.pure-form .pure-group input:first-child, #main .login .pure-group input:first-child,
+.pure-form .pure-group input:first-child, #main .login form .pure-group input:first-child,
 .pure-form .pure-group textarea:first-child,
-#main .login .pure-group textarea:first-child {
+#main .login form .pure-group textarea:first-child {
   top: 1px;
   border-radius: 4px 4px 0 0;
   margin: 0;
 }
 
-.pure-form .pure-group input:first-child:last-child, #main .login .pure-group input:first-child:last-child,
+.pure-form .pure-group input:first-child:last-child, #main .login form .pure-group input:first-child:last-child,
 .pure-form .pure-group textarea:first-child:last-child,
-#main .login .pure-group textarea:first-child:last-child {
+#main .login form .pure-group textarea:first-child:last-child {
   top: 1px;
   border-radius: 4px;
   margin: 0;
 }
 
-.pure-form .pure-group input:last-child, #main .login .pure-group input:last-child,
+.pure-form .pure-group input:last-child, #main .login form .pure-group input:last-child,
 .pure-form .pure-group textarea:last-child,
-#main .login .pure-group textarea:last-child {
+#main .login form .pure-group textarea:last-child {
   top: -2px;
   border-radius: 0 0 4px 4px;
   margin: 0;
 }
 
-.pure-form .pure-group button, #main .login .pure-group button {
+.pure-form .pure-group button, #main .login form .pure-group button {
   margin: 0.35em 0;
 }
 
-.pure-form .pure-input-1, #main .login .pure-input-1 {
+.pure-form .pure-input-1, #main .login form .pure-input-1 {
   width: 100%;
 }
 
-.pure-form .pure-input-2-3, #main .login .pure-input-2-3 {
+.pure-form .pure-input-2-3, #main .login form .pure-input-2-3 {
   width: 66%;
 }
 
-.pure-form .pure-input-1-2, #main .login .pure-input-1-2 {
+.pure-form .pure-input-1-2, #main .login form .pure-input-1-2 {
   width: 50%;
 }
 
-.pure-form .pure-input-1-3, #main .login .pure-input-1-3 {
+.pure-form .pure-input-1-3, #main .login form .pure-input-1-3 {
   width: 33%;
 }
 
-.pure-form .pure-input-1-4, #main .login .pure-input-1-4 {
+.pure-form .pure-input-1-4, #main .login form .pure-input-1-4 {
   width: 25%;
 }
 
 /* Inline help for forms */
 /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-.pure-form .pure-help-inline, #main .login .pure-help-inline,
+.pure-form .pure-help-inline, #main .login form .pure-help-inline,
 .pure-form-message-inline {
   display: inline-block;
   padding-left: 0.3em;
@@ -1991,41 +1993,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 @media only screen and (max-width: 480px) {
-  .pure-form button[type="submit"], #main .login button[type="submit"] {
+  .pure-form button[type="submit"], #main .login form button[type="submit"] {
     margin: 0.7em 0 0;
   }
 
-  .pure-form input:not([type]), #main .login input:not([type]),
+  .pure-form input:not([type]), #main .login form input:not([type]),
   .pure-form input[type="text"],
-  #main .login input[type="text"],
+  #main .login form input[type="text"],
   .pure-form input[type="password"],
-  #main .login input[type="password"],
+  #main .login form input[type="password"],
   .pure-form input[type="email"],
-  #main .login input[type="email"],
+  #main .login form input[type="email"],
   .pure-form input[type="url"],
-  #main .login input[type="url"],
+  #main .login form input[type="url"],
   .pure-form input[type="date"],
-  #main .login input[type="date"],
+  #main .login form input[type="date"],
   .pure-form input[type="month"],
-  #main .login input[type="month"],
+  #main .login form input[type="month"],
   .pure-form input[type="time"],
-  #main .login input[type="time"],
+  #main .login form input[type="time"],
   .pure-form input[type="datetime"],
-  #main .login input[type="datetime"],
+  #main .login form input[type="datetime"],
   .pure-form input[type="datetime-local"],
-  #main .login input[type="datetime-local"],
+  #main .login form input[type="datetime-local"],
   .pure-form input[type="week"],
-  #main .login input[type="week"],
+  #main .login form input[type="week"],
   .pure-form input[type="number"],
-  #main .login input[type="number"],
+  #main .login form input[type="number"],
   .pure-form input[type="search"],
-  #main .login input[type="search"],
+  #main .login form input[type="search"],
   .pure-form input[type="tel"],
-  #main .login input[type="tel"],
+  #main .login form input[type="tel"],
   .pure-form input[type="color"],
-  #main .login input[type="color"],
+  #main .login form input[type="color"],
   .pure-form label,
-  #main .login label {
+  #main .login form label {
     margin-bottom: 0.3em;
     display: block;
   }
@@ -2060,7 +2062,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   }
 
   /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-  .pure-form .pure-help-inline, #main .login .pure-help-inline,
+  .pure-form .pure-help-inline, #main .login form .pure-help-inline,
   .pure-form-message-inline,
   .pure-form-message {
     display: block;
@@ -2374,8 +2376,15 @@ header .home-menu .brand {
 }
 
 #main {
-  border: 1px solid gray;
-  width: 90%;
-  height: 750px;
+  display: block;
+  max-width: 980px;
   margin: 0 auto;
+}
+
+.pure-g > div, #main > div {
+  box-sizing: border-box;
+}
+
+.l-box, #main .login {
+  padding: .75em;
 }
